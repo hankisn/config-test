@@ -16,3 +16,10 @@ spring:
       discovery:
         locator:
           enabled: true
+      routes:
+        - id: quote-service
+          uri: lb://quote-service
+          predicates:
+          - Path=/quote-service/**
+          filters:
+          - RewritePath=/employee/(?.*), /$\{path}/quote
