@@ -18,8 +18,6 @@ spring:
           enabled: true
       routes:
         - id: quote-service
-          uri: lb://quote-service
+          uri: lb://quote-service/quote
           predicates:
-          - Path=/quote-service/**
-          filters:
-          - RewritePath=/quote/(?.*), /$\{path}/quote
+          - Path=/foo
