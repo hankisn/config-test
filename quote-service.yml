@@ -1,4 +1,7 @@
 server:
   port: 8091
 
-message: "Hello World"
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
