@@ -22,4 +22,4 @@ spring:
           predicates:
           - Path=/quote-service/**
           filters:
-          - RewritePath=/employee/(?.*), /$\{path}/quote
+          - RewritePath=/quote/(?.*), /$\{path}/quote
