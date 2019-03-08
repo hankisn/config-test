@@ -26,6 +26,7 @@ spring:
           enabled: true
       routes:
         - id: quote-service
-          uri: lb://quote-service:8091/quote
+#          uri: lb://quote-service:8091/quote
+          uri: http://localhost:8091/quote
           predicates:
           - Path=/foo/{segment}
