@@ -18,6 +18,6 @@ spring:
           enabled: true
       routes:
         - id: quote-service
-          uri: lb://quote-service/
+          uri: lb://quote-service
           predicates:
           - Path=/foo
