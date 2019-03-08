@@ -29,4 +29,6 @@ spring:
           uri: lb://quote-service
 #          uri: lb://quote-service:8091/quote
           predicates:
-          - Path=/foo/{segment}
+          - Path=/foo/**
+          filters:
+          - RewritePath=/foo/, /quote/
