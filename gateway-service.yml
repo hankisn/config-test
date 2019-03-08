@@ -20,4 +20,4 @@ spring:
         - id: quote-service
           uri: lb://quote-service
           predicates:
-          - Path=/foo
+          - Path=/foo/{segment}
