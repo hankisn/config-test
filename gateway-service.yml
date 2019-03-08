@@ -18,7 +18,6 @@ spring:
           enabled: true
       routes:
         - id: quote-service
-#          uri: lb://quote-service
-          uri: https://www.nrk.no/
+          uri: lb://quote-service:8091/quote
           predicates:
           - Path=/foo/{segment}
