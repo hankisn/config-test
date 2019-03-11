@@ -5,3 +5,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8061/eureka/
+
+mapping:
+  quote:
+    base: /quote
+    alias1: /quote/{id}

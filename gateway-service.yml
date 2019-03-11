@@ -31,8 +31,3 @@ spring:
           - Path=/foo/**
           filters:
           - RewritePath=/foo/(?<segment>.*), /quote/$\{segment}
-
-mapping:
-  quote:
-    base: /quote
-    alias1: /quote/{id}
