@@ -27,8 +27,12 @@ spring:
       routes:
         - id: quote-service
           uri: lb://quote-service
-#          uri: lb://quote-service:8091/quote
           predicates:
           - Path=/foo/**
           filters:
-          - RewritePath=/foo/, /quote/
+          - RewritePath=/foo/(?<segment>.*), /quote/$\{segment}
+
+mapping:
+  quote:
+    base: /quote
+    alias1: /quote/{id}
